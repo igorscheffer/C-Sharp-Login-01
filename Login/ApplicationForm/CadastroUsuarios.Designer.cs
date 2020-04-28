@@ -56,7 +56,7 @@
             this.textBairro = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textComplemento = new System.Windows.Forms.TextBox();
-            this.textEstado = new System.Windows.Forms.ComboBox();
+            this.combEstado = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.textCidade = new System.Windows.Forms.TextBox();
@@ -415,14 +415,14 @@
             this.textComplemento.Size = new System.Drawing.Size(150, 20);
             this.textComplemento.TabIndex = 29;
             // 
-            // textEstado
+            // combEstado
             // 
-            this.textEstado.FormattingEnabled = true;
-            this.textEstado.Location = new System.Drawing.Point(200, 247);
-            this.textEstado.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.textEstado.Name = "textEstado";
-            this.textEstado.Size = new System.Drawing.Size(120, 21);
-            this.textEstado.TabIndex = 32;
+            this.combEstado.FormattingEnabled = true;
+            this.combEstado.Location = new System.Drawing.Point(200, 247);
+            this.combEstado.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.combEstado.Name = "combEstado";
+            this.combEstado.Size = new System.Drawing.Size(120, 21);
+            this.combEstado.TabIndex = 32;
             // 
             // label17
             // 
@@ -615,7 +615,7 @@
             this.Controls.Add(this.gunaElipsePanel5);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.textCidade);
-            this.Controls.Add(this.textEstado);
+            this.Controls.Add(this.combEstado);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textComplemento);
@@ -694,7 +694,7 @@
         private System.Windows.Forms.TextBox textBairro;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textComplemento;
-        private System.Windows.Forms.ComboBox textEstado;
+        private System.Windows.Forms.ComboBox combEstado;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textCidade;

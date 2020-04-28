@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login.Util;
 using Login.Util.Validate;
 
 namespace Login.ApplicationForm {
@@ -15,6 +16,18 @@ namespace Login.ApplicationForm {
 
         public CadastroUsuarios() {
             InitializeComponent();
+
+            combTipoCadastro.ValueMember = "Value";
+            combTipoCadastro.DisplayMember = "Name";
+            combTipoCadastro.DataSource = ComboBoxValue.TipoCadastro;
+
+            combTipoPessoa.ValueMember = "Value";
+            combTipoPessoa.DisplayMember = "Name";
+            combTipoPessoa.DataSource = ComboBoxValue.TipoPessoa;
+
+            combEstado.ValueMember = "Value";
+            combEstado.DisplayMember = "Name";
+            combEstado.DataSource = ComboBoxValue.Estados;
         }
 
         private void OnClickSalvar(object sender, EventArgs e) {
@@ -35,7 +48,7 @@ namespace Login.ApplicationForm {
                 Validate.AddRule(textBairro,                "Bairro",                   "required_if:textCEP|min:2|max:60");
                 Validate.AddRule(textComplemento,           "Complemento",              "min:2|max:80");
                 Validate.AddRule(textCidade,                "Cidade",                   "required_if:textCEP|min:2|max:80");
-                Validate.AddRule(textEstado,                "Estado",                   "required_if:textCidade|exact:2");
+                Validate.AddRule(combEstado,                "Estado",                   "required_if:textCidade|exact:2");
 
 
                 Validate.AddRule(textTelefone,              "Telefone",                 "telefone");
