@@ -16,7 +16,6 @@ namespace Login
         public Login()
         {
             InitializeComponent();
-
             textLogin.Text = "digite seu usuario";
             textSenha.Text = "digite sua senha";
             textSenha.PasswordChar = '\0';
@@ -113,6 +112,13 @@ namespace Login
             }
         }
 
+        private void MoveToMain() {
+            this.Hide();
+            Form logado = new Main();
+            logado.Closed += (s, a) => this.Close();
+            logado.Show();
+        }
+
         private void LogInValidation(object sender, EventArgs e)
         {
             if (textLogin.Text == "" || textSenha.Text == "" || textLogin.Text == "digite seu usuario" || textSenha.Text == "digite sua senha")
@@ -121,14 +127,22 @@ namespace Login
             }
             else {
                 if (textLogin.Text == "igorferreira" && textSenha.Text == "unifeb") {
-                    this.Hide();
-                    Form logado = new Main();
-                    logado.Closed += (s, a) => this.Close();
-                    logado.Show();
+                    Properties.Settings.Default.Logado = true;
+                    Properties.Settings.Default.UserLogin = textLogin.Text;
+                    Properties.Settings.Default.UserPass = textSenha.Text;
+                    Properties.Settings.Default.Save();
+
+                    this.MoveToMain();
                 }
                 else {
                     MessageBox.Show("Usuario ou Senha Incorretos.");
                 }
+            }
+        }
+
+        private void OnShowForm(object sender, EventArgs e) {
+            if (Properties.Settings.Default.Logado && !string.IsNullOrEmpty(Properties.Settings.Default.UserLogin) && !string.IsNullOrEmpty(Properties.Settings.Default.UserPass)) {
+                this.MoveToMain();
             }
         }
     }

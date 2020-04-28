@@ -202,6 +202,7 @@
             this.Padding = new System.Windows.Forms.Padding(30);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Shown += new System.EventHandler(this.OnShowForm);
             ((System.ComponentModel.ISupportInitialize)(this.iconLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonClose)).EndInit();
