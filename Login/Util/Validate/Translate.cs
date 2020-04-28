@@ -39,11 +39,11 @@ namespace Login.Util.Validate {
             { "reais",          "{name} deve ser um valor válido dentro do padrão 0.000,00" },
             { "cep",            "{name} deve ser um CEP válida" },
             { "placa",          "{name} deve ser uma Placa válida" },
-            { "min",            "{name} deve ser pelo menos {ruleValue} caracteres" },
+            { "min",            "{name} deve ter pelo menos {ruleValue} caracteres" },
             { "max",            "{name} não pode ser mais longo do que {ruleValue} caracteres" },
             { "exact",          "{name} deve ser exatamente {ruleValue} caracteres" },
             { "regExp",         "{name} não está formatado corretamente" },
-            { "in",             "{name} deve ter exatamente {ruleValue}" },
+            { "in",             "{name} deve conter {ruleValue}" },
             { "date",           "{name} deve ser uma data válida" }
         };
     }

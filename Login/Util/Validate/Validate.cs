@@ -114,13 +114,11 @@ namespace Login.Util.Validate {
             if (RequiredIfComponent != null) {
                 if (RuleValue.Contains(",")) {
                     if (Array.Exists(inRules, find => find.ToLower() == RequiredIfComponent.Value.ToLower())) {
-                        Rules.Optional = false;
                         this.ValidateRule(Rules, true);
                     }
                 }
                 else {
                     if(!string.IsNullOrWhiteSpace(RequiredIfComponent.Value)) {
-                        Rules.Optional = false;
                         this.ValidateRule(Rules, true);
                     }
                 }
@@ -154,7 +152,9 @@ namespace Login.Util.Validate {
         }
 
         private void ValidateEmail(Rules Rules, string Rule) {
+            
             if (!Rules.Optional) {
+                MessageBox.Show("ESTA NO EMAIL");
                 var regexp = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -183,7 +183,7 @@ namespace Login.Util.Validate {
 
         private void ValidateCPF(Rules Rules, string Rule) {
             if (!Rules.Optional) {
-                var regexp = @"^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$";
+                var regexp = @"^(\d{3})([\.\,]\d{3})([\.\,]\d{3})(\-\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
@@ -197,9 +197,9 @@ namespace Login.Util.Validate {
 
         private void ValidateCNPJ(Rules Rules, string Rule) {
             if (!Rules.Optional) {
-                var regexp = @"^(\d{2})(\.\d{3}){2}(\/\d{4})(\-\d{2})$";
+                var regexp = @"^(\d{2})([\.\,]\d{3}){2}(\/\d{4})(\-\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
-
+                MessageBox.Show(Rules.Value);
                 if (!match.Success) {
                     Errors.Add(new Errors { Rules = Rules, Rule = Rule });
                 }

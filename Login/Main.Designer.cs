@@ -30,7 +30,7 @@
         {
             this.menuPrincipal = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCadastrarClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
@@ -50,17 +50,18 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
+            this.menuCadastrarClientes,
             this.fornecedorToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
-            // clientesToolStripMenuItem
+            // menuCadastrarClientes
             // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.menuCadastrarClientes.Name = "menuCadastrarClientes";
+            this.menuCadastrarClientes.Size = new System.Drawing.Size(180, 22);
+            this.menuCadastrarClientes.Text = "Clientes";
+            this.menuCadastrarClientes.Click += new System.EventHandler(this.OnClickCadastrarClientes);
             // 
             // fornecedorToolStripMenuItem
             // 
@@ -96,7 +97,7 @@
 
         private System.Windows.Forms.MenuStrip menuPrincipal;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuCadastrarClientes;
         private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuSair;
     }

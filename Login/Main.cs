@@ -12,6 +12,8 @@ namespace Login
 {
     public partial class Main : Form
     {
+        private object ApplicationForms;
+
         public Main()
         {
             InitializeComponent();
@@ -27,6 +29,11 @@ namespace Login
             if (CloseDialog == DialogResult.No) {
                 e.Cancel = true;
             }
+        }
+
+        private void OnClickCadastrarClientes(object sender, EventArgs e) {
+            Form CadastroClientes = new ApplicationForm.CadastroUsuarios();
+            CadastroClientes.Show();
         }
     }
 }

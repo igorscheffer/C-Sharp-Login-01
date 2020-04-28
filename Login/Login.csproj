@@ -36,8 +36,13 @@
     <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Downloads\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationForm\CadastroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm\CadastroUsuarios.Designer.cs">
+      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +79,9 @@
     <Compile Include="Util\Validate\Translate.cs" />
     <Compile Include="Util\Validate\Valid.cs" />
     <Compile Include="Util\Validate\Validate.cs" />
+    <EmbeddedResource Include="ApplicationForm\CadastroUsuarios.resx">
+      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,5 +118,6 @@
   <ItemGroup>
     <None Include="Resources\error_2.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
