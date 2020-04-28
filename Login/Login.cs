@@ -122,7 +122,7 @@ namespace Login
             else {
                 if (textLogin.Text == "igorferreira" && textSenha.Text == "unifeb") {
                     this.Hide();
-                    Form logado = new Logado();
+                    Form logado = new Main();
                     logado.Closed += (s, a) => this.Close();
                     logado.Show();
                 }
