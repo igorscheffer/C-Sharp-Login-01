@@ -23,20 +23,20 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTipoCadastro = new System.Windows.Forms.Label();
             this.combTipoCadastro = new System.Windows.Forms.ComboBox();
             this.combTipoPessoa = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTipoPessoa = new System.Windows.Forms.Label();
             this.textRazaoSocial = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblRazaoSocial = new System.Windows.Forms.Label();
+            this.lblCNPJ = new System.Windows.Forms.Label();
             this.textCNPJ = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblInscricaoMunicipal = new System.Windows.Forms.Label();
             this.textInscricaoMunicipal = new System.Windows.Forms.MaskedTextBox();
             this.textInscricaoEstadual = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblInscricaoEstadual = new System.Windows.Forms.Label();
             this.checkIsento = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblNomeFantasia = new System.Windows.Forms.Label();
             this.textNomeFantasia = new System.Windows.Forms.TextBox();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
@@ -78,16 +78,16 @@
             this.gunaElipsePanel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTipoCadastro
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label1.Location = new System.Drawing.Point(20, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tipo de Cadastro";
+            this.lblTipoCadastro.AutoSize = true;
+            this.lblTipoCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblTipoCadastro.Location = new System.Drawing.Point(20, 53);
+            this.lblTipoCadastro.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.lblTipoCadastro.Name = "lblTipoCadastro";
+            this.lblTipoCadastro.Size = new System.Drawing.Size(113, 16);
+            this.lblTipoCadastro.TabIndex = 0;
+            this.lblTipoCadastro.Text = "Tipo de Cadastro";
             // 
             // combTipoCadastro
             // 
@@ -106,17 +106,18 @@
             this.combTipoPessoa.Name = "combTipoPessoa";
             this.combTipoPessoa.Size = new System.Drawing.Size(140, 21);
             this.combTipoPessoa.TabIndex = 3;
+            this.combTipoPessoa.SelectedValueChanged += new System.EventHandler(this.OnSelectTipoPessoa);
             // 
-            // label2
+            // lblTipoPessoa
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label2.Location = new System.Drawing.Point(180, 53);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tipo de Pessoa";
+            this.lblTipoPessoa.AutoSize = true;
+            this.lblTipoPessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblTipoPessoa.Location = new System.Drawing.Point(180, 53);
+            this.lblTipoPessoa.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.lblTipoPessoa.Name = "lblTipoPessoa";
+            this.lblTipoPessoa.Size = new System.Drawing.Size(105, 16);
+            this.lblTipoPessoa.TabIndex = 2;
+            this.lblTipoPessoa.Text = "Tipo de Pessoa";
             // 
             // textRazaoSocial
             // 
@@ -126,27 +127,27 @@
             this.textRazaoSocial.Size = new System.Drawing.Size(240, 20);
             this.textRazaoSocial.TabIndex = 4;
             // 
-            // label3
+            // lblRazaoSocial
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label3.Location = new System.Drawing.Point(480, 53);
-            this.label3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Razão Social";
+            this.lblRazaoSocial.AutoSize = true;
+            this.lblRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblRazaoSocial.Location = new System.Drawing.Point(480, 53);
+            this.lblRazaoSocial.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.lblRazaoSocial.Name = "lblRazaoSocial";
+            this.lblRazaoSocial.Size = new System.Drawing.Size(89, 16);
+            this.lblRazaoSocial.TabIndex = 5;
+            this.lblRazaoSocial.Text = "Razão Social";
             // 
-            // label4
+            // lblCNPJ
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label4.Location = new System.Drawing.Point(340, 53);
-            this.label4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "CNPJ";
+            this.lblCNPJ.AutoSize = true;
+            this.lblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblCNPJ.Location = new System.Drawing.Point(340, 53);
+            this.lblCNPJ.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.lblCNPJ.Name = "lblCNPJ";
+            this.lblCNPJ.Size = new System.Drawing.Size(43, 16);
+            this.lblCNPJ.TabIndex = 7;
+            this.lblCNPJ.Text = "CNPJ";
             // 
             // textCNPJ
             // 
@@ -157,16 +158,16 @@
             this.textCNPJ.Size = new System.Drawing.Size(120, 20);
             this.textCNPJ.TabIndex = 8;
             // 
-            // label5
+            // lblInscricaoMunicipal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label5.Location = new System.Drawing.Point(240, 101);
-            this.label5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Inscrição Municipal";
+            this.lblInscricaoMunicipal.AutoSize = true;
+            this.lblInscricaoMunicipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblInscricaoMunicipal.Location = new System.Drawing.Point(240, 101);
+            this.lblInscricaoMunicipal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.lblInscricaoMunicipal.Name = "lblInscricaoMunicipal";
+            this.lblInscricaoMunicipal.Size = new System.Drawing.Size(122, 16);
+            this.lblInscricaoMunicipal.TabIndex = 10;
+            this.lblInscricaoMunicipal.Text = "Inscrição Municipal";
             // 
             // textInscricaoMunicipal
             // 
@@ -188,38 +189,39 @@
             this.textInscricaoEstadual.Size = new System.Drawing.Size(140, 20);
             this.textInscricaoEstadual.TabIndex = 13;
             // 
-            // label6
+            // lblInscricaoEstadual
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label6.Location = new System.Drawing.Point(400, 101);
-            this.label6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 16);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Inscrição Estadual";
+            this.lblInscricaoEstadual.AutoSize = true;
+            this.lblInscricaoEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblInscricaoEstadual.Location = new System.Drawing.Point(400, 101);
+            this.lblInscricaoEstadual.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.lblInscricaoEstadual.Name = "lblInscricaoEstadual";
+            this.lblInscricaoEstadual.Size = new System.Drawing.Size(118, 16);
+            this.lblInscricaoEstadual.TabIndex = 12;
+            this.lblInscricaoEstadual.Text = "Inscrição Estadual";
             // 
             // checkIsento
             // 
             this.checkIsento.AutoSize = true;
-            this.checkIsento.Location = new System.Drawing.Point(560, 122);
+            this.checkIsento.Location = new System.Drawing.Point(560, 123);
             this.checkIsento.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.checkIsento.Name = "checkIsento";
             this.checkIsento.Size = new System.Drawing.Size(55, 17);
             this.checkIsento.TabIndex = 14;
             this.checkIsento.Text = "Isento";
             this.checkIsento.UseVisualStyleBackColor = true;
+            this.checkIsento.CheckedChanged += new System.EventHandler(this.OnCheckIsento);
             // 
-            // label7
+            // lblNomeFantasia
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.label7.Location = new System.Drawing.Point(20, 101);
-            this.label7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 16);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Nome Fantasia";
+            this.lblNomeFantasia.AutoSize = true;
+            this.lblNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.lblNomeFantasia.Location = new System.Drawing.Point(20, 101);
+            this.lblNomeFantasia.Margin = new System.Windows.Forms.Padding(10, 5, 10, 0);
+            this.lblNomeFantasia.Name = "lblNomeFantasia";
+            this.lblNomeFantasia.Size = new System.Drawing.Size(100, 16);
+            this.lblNomeFantasia.TabIndex = 16;
+            this.lblNomeFantasia.Text = "Nome Fantasia";
             // 
             // textNomeFantasia
             // 
@@ -631,21 +633,21 @@
             this.Controls.Add(this.gunaElipsePanel3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gunaElipsePanel1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblNomeFantasia);
             this.Controls.Add(this.textNomeFantasia);
             this.Controls.Add(this.checkIsento);
             this.Controls.Add(this.textInscricaoEstadual);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblInscricaoEstadual);
             this.Controls.Add(this.textInscricaoMunicipal);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblInscricaoMunicipal);
             this.Controls.Add(this.textCNPJ);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblCNPJ);
+            this.Controls.Add(this.lblRazaoSocial);
             this.Controls.Add(this.textRazaoSocial);
             this.Controls.Add(this.combTipoPessoa);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTipoPessoa);
             this.Controls.Add(this.combTipoCadastro);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTipoCadastro);
             this.Name = "CadastroUsuarios";
             this.Text = "CadastroUsuarios";
             this.gunaElipsePanel1.ResumeLayout(false);
@@ -661,20 +663,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTipoCadastro;
         private System.Windows.Forms.ComboBox combTipoCadastro;
         private System.Windows.Forms.ComboBox combTipoPessoa;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTipoPessoa;
         private System.Windows.Forms.TextBox textRazaoSocial;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblRazaoSocial;
+        private System.Windows.Forms.Label lblCNPJ;
         private System.Windows.Forms.MaskedTextBox textCNPJ;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblInscricaoMunicipal;
         private System.Windows.Forms.MaskedTextBox textInscricaoMunicipal;
         private System.Windows.Forms.MaskedTextBox textInscricaoEstadual;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblInscricaoEstadual;
         private System.Windows.Forms.CheckBox checkIsento;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblNomeFantasia;
         private System.Windows.Forms.TextBox textNomeFantasia;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel2;

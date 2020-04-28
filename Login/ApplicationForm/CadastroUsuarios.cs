@@ -14,8 +14,16 @@ namespace Login.ApplicationForm {
     public partial class CadastroUsuarios : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
 
+        private Point InitPosLIE;
+        private Point InitPosTIE;
+        private Point InitPosCI;
+
         public CadastroUsuarios() {
             InitializeComponent();
+
+            InitPosLIE = lblInscricaoEstadual.Location;
+            InitPosTIE = textInscricaoEstadual.Location;
+            InitPosCI = checkIsento.Location;
 
             combTipoCadastro.ValueMember = "Value";
             combTipoCadastro.DisplayMember = "Name";
@@ -69,6 +77,61 @@ namespace Login.ApplicationForm {
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void OnSelectTipoPessoa(object sender, EventArgs e) {
+            string Selected = (string)combTipoPessoa.SelectedValue;
+
+            if (Selected == "PF") {
+                textCNPJ.Mask = "000.000.000-00";
+
+                lblCNPJ.Text = "CPF";
+                lblRazaoSocial.Text = "Nome";
+                lblInscricaoEstadual.Text = "Insc. Produtor Rural";
+
+                lblNomeFantasia.Visible = false;
+                textNomeFantasia.Visible = false;
+                lblInscricaoMunicipal.Visible = false;
+                textInscricaoMunicipal.Visible = false;
+
+                lblNomeFantasia.Enabled = false;
+                textNomeFantasia.Enabled = false;
+                lblInscricaoMunicipal.Enabled = false;
+                textInscricaoMunicipal.Enabled = false;
+
+                lblInscricaoEstadual.Location = new Point(20, lblInscricaoEstadual.Location.Y);
+                textInscricaoEstadual.Location = new Point(20, textInscricaoEstadual.Location.Y);
+                checkIsento.Location = new Point(180, checkIsento.Location.Y);
+            }
+            else {
+                combTipoPessoa.SelectedValue = "PJ";
+
+                textCNPJ.Mask = "00.000.000/0000-00";
+
+                lblCNPJ.Text = "CNPJ";
+                lblRazaoSocial.Text = "Razão Social";
+                lblInscricaoEstadual.Text = "Inscrição Estadual";
+
+                lblNomeFantasia.Enabled = true;
+                textNomeFantasia.Enabled = true;
+                lblInscricaoMunicipal.Enabled = true;
+                textInscricaoMunicipal.Enabled = true;
+
+                lblNomeFantasia.Visible = true;
+                textNomeFantasia.Visible = true;
+                lblInscricaoMunicipal.Visible = true;
+                textInscricaoMunicipal.Visible = true;
+
+                lblInscricaoEstadual.Location = InitPosLIE;
+                textInscricaoEstadual.Location = InitPosTIE;
+                checkIsento.Location = InitPosCI;
+            }
+        }
+
+        private void OnCheckIsento(object sender, EventArgs e) {
+            bool Value = checkIsento.Checked;
+
+            textInscricaoEstadual.Enabled = !Value;
         }
     }
 }
