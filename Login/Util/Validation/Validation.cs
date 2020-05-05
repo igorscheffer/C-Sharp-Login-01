@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace Login.Util.Validate {
-    class Validate {
+namespace Login.Util.Validation {
+    class Validation {
         Form ValidateForm;
         ErrorProvider ErrorProvider;
 
@@ -15,7 +15,7 @@ namespace Login.Util.Validate {
         private List<Valid> Valid = new List<Valid>();
         private List<Errors> Errors = new List<Errors>();
 
-        public Validate(Form Form = null, ErrorProvider ErrorProvider = null) {
+        public Validation(Form Form = null, ErrorProvider ErrorProvider = null) {
             ValidateForm = Form;
             this.ErrorProvider = ErrorProvider;
         }
@@ -152,7 +152,6 @@ namespace Login.Util.Validate {
         }
 
         private void ValidateEmail(Rules Rules, string Rule) {
-            
             if (!Rules.Optional) {
                 var regexp = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
@@ -317,7 +316,7 @@ namespace Login.Util.Validate {
             }
         }
 
-        public void Validation() {
+        public void Validate() {
             foreach (Rules Rule in Rules) {
                 if (!string.IsNullOrWhiteSpace(Rule.Rule)) {
                     this.ValidateRule(Rule);
@@ -365,8 +364,6 @@ namespace Login.Util.Validate {
             foreach (Errors Erro in GetErrors()) {
                 ShowMessage += Erro.Message + "\n\n";
             }
-
-            MessageBox.Show(ShowMessage, "VALIDAÇÃO");
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Login.Util.Validate {
+namespace Login.Util.Validation {
     class Rules {
         private bool? _Optional = null;
 
@@ -12,7 +12,6 @@ namespace Login.Util.Validate {
             get {
                 if (Component.GetType().Name == "ComboBox") {
                     if (Component.SelectedValue == null || Convert.ToString(Component.SelectedValue) == Convert.ToString(-1)) {
-
                         return string.Empty;
                     }
                     else {
@@ -30,7 +29,16 @@ namespace Login.Util.Validate {
                         return Component.Text;
                     }
                 }
+                else if (Component.GetType().Name == "DateTimePicker") {
+                    if (string.IsNullOrWhiteSpace(Component.Text)) {
+                        return string.Empty;
+                    }
+                    else {
+                        return Component.Text;
+                    }
+                }
                 else {
+
                     return Component.Text;
                 }
             }

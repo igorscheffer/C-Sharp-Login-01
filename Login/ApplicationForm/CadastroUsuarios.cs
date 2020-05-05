@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Login.Util;
-using Login.Util.Validate;
+using Login.Util.Validation;
 
 namespace Login.ApplicationForm {
     public partial class CadastroUsuarios : Form {
@@ -40,7 +40,7 @@ namespace Login.ApplicationForm {
 
         private void OnClickSalvar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Validate(this, ErrorProvider);
+                Validation Validate = new Validation(this, ErrorProvider);
 
                 Validate.AddRule(combTipoCadastro,          "Tipo de Cadastro",         "required|in:C,F,A");
                 Validate.AddRule(combTipoPessoa,            "Tipo de Pessoa",           "required|in:PF,PJ");
@@ -64,7 +64,7 @@ namespace Login.ApplicationForm {
                 Validate.AddRule(textCelular,               "Celular",                  "telefone");
                 Validate.AddRule(textEmail,                 "E-mail",                   "email");
 
-                Validate.Validation();
+                Validate.Validate();
 
                 if (Validate.IsValid()) {
                     MessageBox.Show("Cadastro Efetuado com sucesso.");

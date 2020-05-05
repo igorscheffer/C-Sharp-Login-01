@@ -1,4 +1,4 @@
-﻿namespace Login.Util.Validate {
+﻿namespace Login.Util.Validation {
     class Valid {
         public Rules Rules { get; set; }
         public string Message { get; set; }

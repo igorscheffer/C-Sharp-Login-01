@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Login.Util.Validate {
+namespace Login.Util.Validation {
     class Translate {
         private string _Message;
 

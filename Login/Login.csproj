@@ -75,11 +75,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ComboBoxValue.cs" />
-    <Compile Include="Util\Validate\Errors.cs" />
-    <Compile Include="Util\Validate\Rules.cs" />
-    <Compile Include="Util\Validate\Translate.cs" />
-    <Compile Include="Util\Validate\Valid.cs" />
-    <Compile Include="Util\Validate\Validate.cs" />
+    <Compile Include="Util\Validation\Errors.cs" />
+    <Compile Include="Util\Validation\Rules.cs" />
+    <Compile Include="Util\Validation\Translate.cs" />
+    <Compile Include="Util\Validation\Valid.cs" />
+    <Compile Include="Util\Validation\Validation.cs" />
     <EmbeddedResource Include="ApplicationForm\CadastroUsuarios.resx">
       <DependentUpon>CadastroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
