@@ -341,6 +341,17 @@ namespace Login.Util.Validation {
             return Errors;
         }
 
+        public void ClearAllComponents() {
+            foreach (Rules Rule in Rules) {
+                if (Rule.Component.GetType().Name == "ComboBox") {
+                    Rule.Component.SelectedValue = -1;
+                }
+                else {
+                    Rule.Component.Text = "";
+                }
+            }
+        }
+
         public void ErrorProviderShow(int Width = 20, int Height = 20, int Padding = -26) {
             if (ErrorProvider != null) {
                 Bitmap ErrorIconBit = new Bitmap(Resources.error, Width, Height);

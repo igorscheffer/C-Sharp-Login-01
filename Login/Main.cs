@@ -32,7 +32,7 @@ namespace Login
         }
 
         private void OnClickCadastrarClientes(object sender, EventArgs e) {
-            Form CadastroClientes = new ApplicationForm.CadastroUsuarios();
+            Form CadastroClientes = new ApplicationForm.CadastroClientes();
             CadastroClientes.Show();
         }
     }

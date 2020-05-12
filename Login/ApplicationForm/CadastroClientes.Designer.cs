@@ -1,5 +1,5 @@
 ﻿namespace Login.ApplicationForm {
-    partial class CadastroUsuarios {
+    partial class CadastroClientes {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -38,13 +38,9 @@
             this.checkIsento = new System.Windows.Forms.CheckBox();
             this.lblNomeFantasia = new System.Windows.Forms.Label();
             this.textNomeFantasia = new System.Windows.Forms.TextBox();
-            this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.gunaElipsePanel3 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaElipsePanel4 = new Guna.UI.WinForms.GunaElipsePanel();
             this.label11 = new System.Windows.Forms.Label();
             this.textCEP = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,8 +59,6 @@
             this.textTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.gunaElipsePanel5 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaElipsePanel6 = new Guna.UI.WinForms.GunaElipsePanel();
             this.label27 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.textRamal = new System.Windows.Forms.TextBox();
@@ -73,9 +67,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.textEmail = new System.Windows.Forms.TextBox();
             this.btnSalvar = new FontAwesome.Sharp.IconButton();
-            this.gunaElipsePanel1.SuspendLayout();
-            this.gunaElipsePanel3.SuspendLayout();
-            this.gunaElipsePanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTipoCadastro
@@ -231,28 +222,6 @@
             this.textNomeFantasia.Size = new System.Drawing.Size(200, 20);
             this.textNomeFantasia.TabIndex = 15;
             // 
-            // gunaElipsePanel1
-            // 
-            this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel1.BaseColor = System.Drawing.Color.Gainsboro;
-            this.gunaElipsePanel1.Controls.Add(this.gunaElipsePanel2);
-            this.gunaElipsePanel1.Controls.Add(this.label8);
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(20, 41);
-            this.gunaElipsePanel1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.gunaElipsePanel1.Name = "gunaElipsePanel1";
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(700, 2);
-            this.gunaElipsePanel1.TabIndex = 17;
-            // 
-            // gunaElipsePanel2
-            // 
-            this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(2, -84);
-            this.gunaElipsePanel2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.gunaElipsePanel2.Name = "gunaElipsePanel2";
-            this.gunaElipsePanel2.Size = new System.Drawing.Size(700, 2);
-            this.gunaElipsePanel2.TabIndex = 19;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -287,28 +256,6 @@
             this.label10.Size = new System.Drawing.Size(163, 16);
             this.label10.TabIndex = 20;
             this.label10.Text = "Informações de Endereço";
-            // 
-            // gunaElipsePanel3
-            // 
-            this.gunaElipsePanel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel3.BaseColor = System.Drawing.Color.Gainsboro;
-            this.gunaElipsePanel3.Controls.Add(this.gunaElipsePanel4);
-            this.gunaElipsePanel3.Controls.Add(this.label11);
-            this.gunaElipsePanel3.Location = new System.Drawing.Point(20, 169);
-            this.gunaElipsePanel3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.gunaElipsePanel3.Name = "gunaElipsePanel3";
-            this.gunaElipsePanel3.Size = new System.Drawing.Size(700, 2);
-            this.gunaElipsePanel3.TabIndex = 19;
-            // 
-            // gunaElipsePanel4
-            // 
-            this.gunaElipsePanel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel4.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel4.Location = new System.Drawing.Point(2, -84);
-            this.gunaElipsePanel4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.gunaElipsePanel4.Name = "gunaElipsePanel4";
-            this.gunaElipsePanel4.Size = new System.Drawing.Size(700, 2);
-            this.gunaElipsePanel4.TabIndex = 19;
             // 
             // label11
             // 
@@ -488,28 +435,6 @@
             this.label26.TabIndex = 36;
             this.label26.Text = "Informações de Contato";
             // 
-            // gunaElipsePanel5
-            // 
-            this.gunaElipsePanel5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel5.BaseColor = System.Drawing.Color.Gainsboro;
-            this.gunaElipsePanel5.Controls.Add(this.gunaElipsePanel6);
-            this.gunaElipsePanel5.Controls.Add(this.label27);
-            this.gunaElipsePanel5.Location = new System.Drawing.Point(20, 296);
-            this.gunaElipsePanel5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.gunaElipsePanel5.Name = "gunaElipsePanel5";
-            this.gunaElipsePanel5.Size = new System.Drawing.Size(700, 2);
-            this.gunaElipsePanel5.TabIndex = 35;
-            // 
-            // gunaElipsePanel6
-            // 
-            this.gunaElipsePanel6.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel6.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel6.Location = new System.Drawing.Point(2, -84);
-            this.gunaElipsePanel6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.gunaElipsePanel6.Name = "gunaElipsePanel6";
-            this.gunaElipsePanel6.Size = new System.Drawing.Size(700, 2);
-            this.gunaElipsePanel6.TabIndex = 19;
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -614,7 +539,6 @@
             this.Controls.Add(this.textTelefone);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.gunaElipsePanel5);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.textCidade);
             this.Controls.Add(this.combEstado);
@@ -630,9 +554,7 @@
             this.Controls.Add(this.textCEP);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.gunaElipsePanel3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.gunaElipsePanel1);
             this.Controls.Add(this.lblNomeFantasia);
             this.Controls.Add(this.textNomeFantasia);
             this.Controls.Add(this.checkIsento);
@@ -650,12 +572,6 @@
             this.Controls.Add(this.lblTipoCadastro);
             this.Name = "CadastroUsuarios";
             this.Text = "CadastroUsuarios";
-            this.gunaElipsePanel1.ResumeLayout(false);
-            this.gunaElipsePanel1.PerformLayout();
-            this.gunaElipsePanel3.ResumeLayout(false);
-            this.gunaElipsePanel3.PerformLayout();
-            this.gunaElipsePanel5.ResumeLayout(false);
-            this.gunaElipsePanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,13 +594,9 @@
         private System.Windows.Forms.CheckBox checkIsento;
         private System.Windows.Forms.Label lblNomeFantasia;
         private System.Windows.Forms.TextBox textNomeFantasia;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel3;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.MaskedTextBox textCEP;
         private System.Windows.Forms.Label label12;
@@ -703,8 +615,6 @@
         private System.Windows.Forms.MaskedTextBox textTelefone;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel5;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel6;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textRamal;

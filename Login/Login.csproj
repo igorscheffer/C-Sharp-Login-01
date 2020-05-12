@@ -54,11 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationForm\CadastroUsuarios.cs">
+    <Compile Include="ApplicationForm\CadastroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationForm\CadastroUsuarios.Designer.cs">
-      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
+    <Compile Include="ApplicationForm\CadastroClientes.Designer.cs">
+      <DependentUpon>CadastroClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -80,8 +80,8 @@
     <Compile Include="Util\Validation\Translate.cs" />
     <Compile Include="Util\Validation\Valid.cs" />
     <Compile Include="Util\Validation\Validation.cs" />
-    <EmbeddedResource Include="ApplicationForm\CadastroUsuarios.resx">
-      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicationForm\CadastroClientes.resx">
+      <DependentUpon>CadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
